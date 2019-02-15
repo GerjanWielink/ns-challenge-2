@@ -17,11 +17,11 @@ import java.io.InputStream;
 public class Program {
 
     // Change to your group authentication token
-    private static final String GROUP_TOKEN = "0360069f-41cc-4399-8b2d-68b0cd4574f4";
+    private static final String GROUP_TOKEN = "e57d5faf-c342-449a-b7ad-6a79b901d118";
 
     // Choose ID of test FILE_ID to transmit: 1, 2, 3, 4 or 5
     // Sizes in bytes are: 248, 2085, 6267, 21067, 53228
-    private static final int FILE_ID = 1;
+    private static final int FILE_ID = 2;
 
     // Change to your protocol implementation
     private static IRDTProtocol protocolImpl = new NaiveDataTransferProtocol();

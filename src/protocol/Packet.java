@@ -48,4 +48,13 @@ public class Packet {
 
         return packet;
     }
+
+    @Override
+    public String toString() {
+        return this.sequenceNumber + ": " + this.status;
+    }
+
+    public Integer[] getData() {
+        return data;
+    }
 }
