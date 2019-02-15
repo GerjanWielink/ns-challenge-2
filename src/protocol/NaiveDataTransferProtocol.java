@@ -67,9 +67,10 @@ public class NaiveDataTransferProtocol extends IRDTProtocol {
     private void updateSendingWindow() {
         sendingWindow.sort(Comparator.comparingInt(Packet::getSequenceNumber));
 
-
-        while (sendingWindow.get(0).getStatus() == Packet.STATUS.ACKNOWLEDGED) {
-            sendingWindow.remove(0);
+        if (sendingWindow.size() > 0) {
+            while (sendingWindow.get(0).getStatus() == Packet.STATUS.ACKNOWLEDGED) {
+                sendingWindow.remove(0);
+            }
         }
 
         while (sendingWindow.size() < WINDOW_SIZE) {
